@@ -1,0 +1,485 @@
+body {
+    background: #e0e0e0;
+    padding: 20px;
+}
+
+.Main {
+    position: absolute;
+    width: 873px;
+    background: white;
+    display: grid;
+    grid-template-columns: 64% 36%;
+    grid-template-rows: 40px 428px 83px;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25);
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+
+    /* .TopBar { */
+    position: relative;
+    /* background: #ffffff; */
+
+    /* .closeButton {
+            position: absolute;
+            right: 14px;
+            height: 12px;
+            display: flex;
+            align-items: center;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        } */
+
+    /* .backButton {
+            position: absolute;
+            left: 14px;
+            height: 12px;
+            display: flex;
+            align-items: center;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        } */
+
+    /* grid-column: 1 / 3; */
+}
+
+.Calendar {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    background: #f2f2f2;
+    grid-column: 1 / 2;
+
+    /* .calendarWrapper {
+            transform: scale(0.95); */
+
+    /* .monthName {
+                width: 376.99px;
+                display: flex;
+                justify-content: space-between;
+                padding: 0px 7.38px;
+                margin-left: auto;
+                margin-right: auto;
+                margin-bottom: 14px; */
+
+    /* .text {
+                    font-style: normal;
+                    font-family: "Roboto";
+                    font-weight: 300;
+                    line-height: normal;
+                    font-size: 37.6994px;
+                } */
+
+    /* .next,
+                .prev {
+                    cursor: pointer;
+                } */
+}
+
+.calendarBody {
+    display: grid;
+    width: 445.8px;
+    margin: 0 auto;
+    grid-gap: 9px;
+    grid-template-columns: 55.61px 55.61px 55.61px 55.61px 55.61px 55.61px 55.61px;
+
+    /* .column {
+                    display: grid;
+                    grid-gap: 10px;
+                    grid-template-rows: 24.5px repeat(auto-fill, 42.79px); */
+
+    /* .weekdayName {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        font-size: 20.73px;
+                        font-family: "Roboto";
+                        font-weight: 600;
+                    } */
+
+    /* .day {
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                        position: relative;
+                        font-size: 23.53px;
+                        height: 42.79px;
+                        width: 42.79px;
+                        margin: 0 auto;
+                        font-family: "Roboto";
+                        font-weight: 400;
+                        cursor: pointer; */
+
+    /* .dayNumber {
+                            z-index: 1;
+                        } */
+
+    /* .availableTimes {
+                            display: grid;
+                            position: absolute;
+                            top: 6px;
+                            right: 0;
+                            grid-gap: 2px; */
+
+    /* .morningCircle {
+                                display: none;
+                                background: #f2c94c;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                            } */
+
+    /* .afternoonCircle {
+                                display: none;
+                                background: #f2994a;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                            } */
+
+    /* .eveningCircle {
+                                display: none;
+                                background: #eb5757;
+                                width: 5px;
+                                height: 5px;
+                                border-radius: 50%;
+                            } */
+}
+
+.availableTimes.morning .morningCircle {
+    display: block;
+}
+
+.availableTimes.afternoon .afternoonCircle {
+    display: block;
+}
+
+.availableTimes.evening .eveningCircle {
+    display: block;
+}
+
+/* } */
+
+.day.active::before {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    content: "";
+    background: white;
+    border-radius: 50%;
+    top: 0;
+    box-shadow: 0px 0px 1.88497px rgba(0, 0, 0, 0.12),
+        0px 1.88497px 1.88497px rgba(0, 0, 0, 0.24),
+        0px 0px 7.53988px rgba(0, 0, 0, 0.12);
+    left: 0;
+}
+
+/* } */
+/* } */
+/* } */
+/* } */
+
+.InfoTab {
+    grid-column: 2 / 3;
+    grid-row: 2/4;
+    background: #ffffff;
+    padding: 30px;
+
+    /* .dayInfo {
+            font-family: "Roboto";
+            font-weight: 300; */
+
+    /* .date {
+                font-size: 37.97px;
+                color: #8a8a8a;
+            } */
+
+    /* .dayOfTheWeek {
+                font-size: 37.97px;
+                color: #333333;
+            } */
+
+    /* .line {
+                height: 11px;
+                border-bottom: solid 1px black;
+                width: 80%;
+            } */
+}
+
+.times {
+    width: 100%;
+    margin-top: 30px;
+    display: grid;
+    grid-auto-rows: 39.54px;
+    grid-template-columns: repeat(auto-fill, 92.47px);
+    grid-gap: 14px;
+
+    /* .noTimes {
+                font-family: Roboto;
+                font-weight: normal;
+                font-size: 23.2649px;
+                grid-column: 1/3;
+            } */
+
+    /* .time {
+                background: #f2f2f2;
+                font-family: Roboto;
+                font-weight: normal;
+                font-size: 23.2649px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 8.04108px;
+                box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24),
+                    0px 0px 2px rgba(0, 0, 0, 0.12);
+                cursor: pointer;
+            } */
+}
+
+/* } */
+
+.TimeSwitches {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    background: #f2f2f2;
+    display: grid;
+    grid-gap: 37.71px;
+    grid-template-columns: 146.29px 146.29px 146.29px;
+    grid-template-rows: auto;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+
+    /* .timeSwitch { */
+    /* background:white; */
+    /* width: 100%;
+            height: 47.63px;
+            display: grid;
+            grid-template-columns: min-content min-content;
+            grid-template-rows: min-content min-content;
+            grid-column-gap: 7px; */
+
+    /* .radioButton {
+                align-self: center;
+                grid-row: 1 / 3;
+            } */
+
+    /* .mainText {
+                grid-row: 1/2;
+                align-self: start;
+                font-family: Roboto;
+                font-weight: normal;
+                font-size: 24.8871px;
+            } */
+
+    /* .secondaryText {
+                grid-row: 2/3;
+                align-self: start;
+                font-family: Roboto;
+                font-weight: normal;
+                font-size: 14.6805px;
+            } */
+}
+
+/* } */
+/* } */
+
+.Register {
+    display: grid;
+
+    /* .zombieLogo {
+        background: url("https://cdn.jsdelivr.net/gh/DanilaGRob/svgFiles/29512826_961369004030044_4022693629591027712_n%20(1).jpg");
+        background-size: cover;
+        background-position: center;
+        opacity: 0.7;
+    } */
+
+    /* .RegistrationForm {
+        grid-column: 1 / 2;
+        background: #f2f2f2;
+        display: grid;
+        justify-content: center;
+        align-content: center; */
+
+    /* .wrapper {
+            grid-row-gap: 18.5px;
+            display: inline-grid;
+            grid-template-columns: 330px 130px;
+            grid-template-rows: 40.5px 40.5px 40.5px 81px;
+        } */
+
+    /* .wrapper input:hover,
+        .wrapper input:focus,
+        .wrapper input:valid {
+            border-color: #36454f;
+            transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        } */
+
+    /* .wrapper input~span {
+            transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            font-size: 16px;
+            padding-left: 5px;
+            color: rgba(0, 0, 0, 0.38);
+            position: absolute;
+            top: 50%;
+            transform: translateY(calc(-50% - 4px));
+            pointer-events: none;
+        } */
+
+    /* .wrapper input:focus~span {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 16px;
+            font-size: 12px;
+            top: 0;
+            transform: translateY(-100%);
+        } */
+
+    /* .wrapper input:valid~span {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 16px;
+            font-size: 12px;
+            top: 0;
+            transform: translateY(-100%);
+        } */
+
+    /* .textInput input {
+            background: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            padding: 0 5px;
+            padding-bottom: 6.5px;
+            line-height: 24px;
+            width: 100%;
+            height: 32.5px;
+            font-size: 16px;
+            border: none;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+            outline: none;
+        } */
+
+    /* .textInput {
+            grid-column: 1/2;
+            position: relative;
+            z-index: 1;
+        } */
+
+    /* .textArea {
+            grid-column: 1 / 3;
+            grid-row: 4/5;
+            position: relative;
+            padding-left: 5px;
+        } */
+
+    /* .textArea textarea {
+            background: none;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            width: 100%;
+            font-size: 16px;
+            padding: 0;
+            border: none;
+            outline: none;
+            height: 100%;
+            resize: none;
+        } */
+
+    /* .textArea textarea~span {
+            transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 24px;
+            font-size: 16px;
+            padding-left: 5px;
+            color: rgba(0, 0, 0, 0.38);
+            position: absolute;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+        } */
+
+    /* .textArea textarea:focus~span {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 16px;
+            font-size: 12px;
+            top: 0;
+            transform: translateY(-100%);
+        } */
+
+    /* .textArea textarea:valid~span {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: 16px;
+            font-size: 12px;
+            top: 0;
+            transform: translateY(-100%);
+        } */
+
+    /* .textArea textarea:hover~.underline,
+        .textArea textarea:focus~.underline,
+        .textArea textarea:valid~.underline {
+            border-color: #36454f;
+            transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        } */
+
+    /* .underline {
+            position: absolute;
+            bottom: -16px;
+            height: 16px;
+            width: 100%;
+            left: 0;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+        } */
+}
+
+.TimeSwitches {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+
+    /* .submitButton {
+            box-shadow: 0px 1.5px 1.5px rgba(0, 0, 0, 0.24),
+                0px 0px 1.5px rgba(0, 0, 0, 0.12);
+            width: 108.75px;
+            height: 39px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: normal;
+            line-height: normal;
+            font-size: 17.4487px;
+            text-align: center;
+            background: #ffffff;
+            border-radius: 6.03081px;
+            margin-right: 22.25px;
+            cursor: pointer;
+            transition: all 0.3s cubic-bezier(0.64, 0.09, 0.08, 1);
+        } */
+
+    /* .submitButton:active {
+            box-shadow: 0px 0.5px 0.5px rgba(0, 0, 0, 0.44),
+                0px 0px 1.5px rgba(0, 0, 0, 0.12);
+            outline: none;
+            transform: translateY(1px);
+        } */
+}
+
+/* } */
