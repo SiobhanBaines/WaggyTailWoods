@@ -1,0 +1,119 @@
+@font-face {
+    font-family: maiandra;
+    src: url(assets/fonts/Maiandra_GD_Regular.ttf);
+}
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    /* COLOURS */
+    --text-black: #140a0a;
+    --white: #fff;
+    --brown: #34312c;
+    --overlay-green: rgba(72, 106, 70, .76);
+    --light-grey: #d6d2d2;
+    --mid-grey: #9e9ea0cc;
+    --dark-grey: #3b3b3b;
+    --mid-orange: rgba(248, 197, 87, 0.714);
+
+    --mid-yellow: rgba(251, 234, 4, 0.8);
+    --check-yellow: rgb(207, 200, 100);
+    --bright-red: rgba(248, 45, 45, 0.8);
+    --check-red: rgb(176, 4, 4);
+    --red: #ff0000;
+}
+
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    line-height: 1.7;
+    color: var(--white);
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.opaque-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(250, 250, 250, 0.8);
+}
+
+.u-center-text {
+    text-align: center;
+}
+
+.navbar {
+    margin-bottom: 0;
+    border: 0;
+    width: 100%;
+    justify-content: flex-end;
+}
+
+.nav-item {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    color: rgb(255 255 255);
+}
+
+.header {
+    height: 97vh;
+    background-image: linear-gradient(to right bottom, var(--overlay-green),
+            var(--overlay-green)), url(../images/hero.jpg);
+    background-size: cover;
+    background-position: top;
+    position: relative;
+
+    /* clip-path: polygon(0 0, 100% 0, 100% 90vh, 0 100%); */
+}
+
+.header__logo-box {
+    top: 3rem;
+    left: 3rem;
+    height: 8rem;
+    width: 8rem;
+    position: absolute;
+    border-radius: 50%;
+}
+
+.header__logo {
+    height: 10rem;
+    border-radius: 50%;
+}
+
+.header__text-box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+}
+
+.heading-primary {
+    width: 100%;
+}
+
+.heading-primary--main {
+    height: 11rem;
+    font-family: maiandra;
+    font-size: 6rem;
+    /* font-weight: 700; */
+    letter-spacing: 0.2rem;
+    margin-bottom: 10%;
+    display: inline-block;
+    background-image: linear-gradient(to right, var(--white), var(--brown));
+    -webkit-background-clip: text;
+    color: transparent;
+
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
